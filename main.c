@@ -24,9 +24,19 @@ void isLeap(int year) {
     }
 }
 
+void printEvenNumbers(int from, int to) {
+    for (int number = from; number <= to; ++number) {
+        if (number % 2 == 0) {
+            printf("%i\n", number);
+        }
+    }
+}
+
 int main() {
     // checkValue(-43);
-    isLeap(2000);
+    //isLeap(2000);
+    printEvenNumbers(-12, 50);
     return 0;
 }
+
 
