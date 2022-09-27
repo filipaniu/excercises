@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-void checkValue(double a) {
+void checkValue() {
+    double a;
+    printf("podaj liczbe\n");
+    scanf("%lf", &a);
     if (a > 0) {
         printf("ta liczba jest dodatnia\n");
     } else if (a < 0) {
@@ -32,10 +35,11 @@ void printEvenNumbers(int from, int to) {
     }
 }
 
+
 int main() {
-    // checkValue(-43);
+     checkValue();
     //isLeap(2000);
-    printEvenNumbers(-12, 50);
+    //printEvenNumbers(-12, 50);
     return 0;
 }
 
