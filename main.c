@@ -15,7 +15,10 @@ void checkValue() {
 }
 
 //napisz funkcje ktora przyjmie rok i wydrukuje czy jest przestepny czy nie
-void isLeap(int year) {
+void isLeap() {
+    int year;
+    printf("podaj rok\n");
+    scanf("%i", &year);
     if (year % 400 == 0) {
         printf("%i to rok przestepny", year);
     } else if (year % 100 == 0) {
@@ -27,7 +30,12 @@ void isLeap(int year) {
     }
 }
 
-void printEvenNumbers(int from, int to) {
+void printEvenNumbers() {
+    int from, to;
+    printf("podaj poczatek zakresu\n");
+    scanf("%i", &from);
+    printf("podaj koniec zakresu\n");
+    scanf("%i", &to);
     for (int number = from; number <= to; ++number) {
         if (number % 2 == 0) {
             printf("%i\n", number);
@@ -37,9 +45,9 @@ void printEvenNumbers(int from, int to) {
 
 
 int main() {
-     checkValue();
-    //isLeap(2000);
-    //printEvenNumbers(-12, 50);
+    //checkValue();
+    //isLeap();
+    printEvenNumbers();
     return 0;
 }
 
