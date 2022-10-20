@@ -43,12 +43,21 @@ void printEvenNumbers() {
     }
 }
 
+void isLetter(char a) {
+    int code = (int) a;
+    if (code > 64 && code < 91) {
+        printf("%c jest litera\n", a);
+    } else if (code > 96 && code < 123) {
+        printf("%c jest litera\n", a);
+    } else {
+        printf("%c nie jest litera\n", a);
+    }
+}
 
 int main() {
     //checkValue();
     //isLeap();
-    printEvenNumbers();
+    //printEvenNumbers();
+    isLetter('A');
     return 0;
 }
-
-
