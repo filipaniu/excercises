@@ -54,10 +54,24 @@ void isLetter(char a) {
     }
 }
 
+int findMinimum(int x[], int size) {
+    int min = x[0];
+    for (int f = 0; f < size; f++) {
+        if (x[f] < min) {
+            min = x[f];
+        }
+    }
+    return min;
+}
+
 int main() {
     //checkValue();
     //isLeap();
     //printEvenNumbers();
-    isLetter('A');
+    //isLetter('');
+    int d[] = {2, 7, 6, 8, -10, 9};
+    int size = sizeof d / 4;
+    int result = findMinimum(d, size);
+    printf("min = %i", result);
     return 0;
 }
