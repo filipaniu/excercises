@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void checkValue() {
     double a;
@@ -86,6 +87,10 @@ void array(int arr[], int size) {
     printf("\n");
 }
 
+double getCSideLength(double a, double b) {
+    return sqrt(a * a + b * b);
+}
+
 int main() {
     //checkValue();
     //isLeap();
@@ -95,10 +100,11 @@ int main() {
     //int size = sizeof d / 4;
     // int result = findMinimum(d, size);
     //printf("min = %i", result);
-    int arr[] = {64, 34, 25, 12, 22, 11, 90, 76, 23, 87, 97, 31, 54};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort(arr, size);
-    printf("Sorted array: \n");
-    array(arr, size);
+//    int arr[] = {64, 34, 25, 12, 22, 11, 90, 76, 23, 87, 97, 31, 54};
+//    int size = sizeof(arr) / sizeof(arr[0]);
+//    bubbleSort(arr, size);
+//    printf("Sorted array: \n");
+//    array(arr, size);
+    printf("%lf", getCSideLength(6, 4));
     return 0;
 }
