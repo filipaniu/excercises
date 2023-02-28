@@ -90,6 +90,14 @@ void array(int arr[], int size) {
 double getCSideLength(double a, double b) {
     return sqrt(a * a + b * b);
 }
+//netValue = 100
+// taxRate = 0.23
+// Gross = 100 + 23% * 100 = 100 + 23 = 123
+double netToGross(double netValue,double taxRate){
+    double Gross = netValue * (taxRate + 1);
+     return Gross;
+
+}
 
 int main() {
     //checkValue();
@@ -105,6 +113,7 @@ int main() {
 //    bubbleSort(arr, size);
 //    printf("Sorted array: \n");
 //    array(arr, size);
-    printf("%lf", getCSideLength(6, 4));
+//    printf("%lf", getCSideLength(6, 4));
+    printf("%lf", netToGross(1460.23, 0.23));
     return 0;
 }
