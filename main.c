@@ -91,19 +91,10 @@ double getCSideLength(double a, double b) {
     return sqrt(a * a + b * b);
 }
 
-//netValue = 100
-// taxRate = 0.23
-// Gross = 100 + 23% * 100 = 100 + 23 = 123
 double netToGross(double netValue, double taxRate) {
-    double Gross = netValue * (taxRate + 1);
-    return Gross;
-
+     return netValue * (taxRate + 1);
 }
 
-//Oblicz kwote laczna na lokacie pol rocznej ktora jest oprocentowana w skali roku 10%
-//zaimplementowa jako funkcje ktora poozwala obliczyc kwote laczna dla dowolnej kwoty inwestycji, dowolne liczby mieciecy i dowolnego oprocentowania
-// pomysly na nazwy zmienneych i parametrow : initialCapital investmentCapital investment months rate interestRate
-// 1000 , 6 , 0.1
 double calculateInvestmentValue(double capital, double months, double yearlyRate) {
     return capital * (yearlyRate * (months / 12)) + capital;
 }
