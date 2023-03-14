@@ -92,11 +92,28 @@ double getCSideLength(double a, double b) {
 }
 
 double netToGross(double netValue, double taxRate) {
-     return netValue * (taxRate + 1);
+    return netValue * (taxRate + 1);
 }
 
 double calculateInvestmentValue(double capital, double months, double yearlyRate) {
     return capital * (yearlyRate * (months / 12)) + capital;
+}
+
+short isPrime(int number) {
+    for (int i = number - 1; i > 1; i--) {
+        if (number % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+void findPrimeNumbers(int limit) {
+    for (int i = 1; i < limit; i++) {
+        if(isPrime(i)){
+            printf("%i\n", i);
+        }
+    }
 }
 
 int main() {
@@ -115,6 +132,9 @@ int main() {
 //    array(arr, size);
 //    printf("%lf", getCSideLength(6, 4));
 //    printf("%lf", netToGross(1460.23, 0.23));
-    printf("%lf", calculateInvestmentValue(1000, 6, 0.1));
+//    printf("%lf", calculateInvestmentValue(1000, 6, 0.1));
+//    printf("%i", isPrime(9));
+//    printf("\n%i", isPrime(19));
+    findPrimeNumbers(100);
     return 0;
 }
