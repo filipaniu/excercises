@@ -65,6 +65,16 @@ int findMinimum(int x[], int size) {
     return min;
 }
 
+int findMaximum(int x[], int size) {
+    int max = x[0];
+    for (int f = 0; f < size; f++) {
+        if (x[f] > max) {
+            max = x[f];
+        }
+    }
+    return max;
+}
+
 void swap(int *f, int *i) {
     int temp = *f;
     *f = *i;
@@ -110,10 +120,16 @@ short isPrime(int number) {
 
 void findPrimeNumbers(int limit) {
     for (int i = 1; i < limit; i++) {
-        if(isPrime(i)){
+        if (isPrime(i)) {
             printf("%i\n", i);
         }
     }
+}
+
+int getAmplitude(int a[], int size) {
+    int min = findMinimum(a, size);
+    int max = findMaximum(a, size);
+    return max - min;
 }
 
 int main() {
@@ -125,8 +141,8 @@ int main() {
     //int size = sizeof d / 4;
     // int result = findMinimum(d, size);
     //printf("min = %i", result);
-//    int arr[] = {64, 34, 25, 12, 22, 11, 90, 76, 23, 87, 97, 31, 54};
-//    int size = sizeof(arr) / sizeof(arr[0]);
+    int arr[] = {64, 34, 25, 12, 22, 11, 90, 76, 23, 87, 97, 31, 54};
+    int size = sizeof(arr) / sizeof(arr[0]);
 //    bubbleSort(arr, size);
 //    printf("Sorted array: \n");
 //    array(arr, size);
@@ -135,6 +151,7 @@ int main() {
 //    printf("%lf", calculateInvestmentValue(1000, 6, 0.1));
 //    printf("%i", isPrime(9));
 //    printf("\n%i", isPrime(19));
-    findPrimeNumbers(100);
+//    findPrimeNumbers(100);
+    printf("%i", getAmplitude(arr, size));
     return 0;
 }
